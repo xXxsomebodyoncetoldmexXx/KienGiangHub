@@ -51,7 +51,7 @@ def main():
       r = soup.find("div", {"id": "error-message"})
       if r:
         print("[?]You has disconnected, reason:", r)
-        flg = True
+        flg = False
         continue
       if flg:
         print("[!]You are connected")
