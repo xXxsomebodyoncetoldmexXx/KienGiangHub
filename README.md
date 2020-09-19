@@ -13,7 +13,8 @@ Hướng Dẫn sử dụng:
 3. Suy nghĩ lại về cuộc đời vì sao mình lại cần đọc cái hướng dẫn này.
 4. Wala, bạn đã kết nối tới wifi của DHCN.
 
-[Link down bản android](https://install.appcenter.ms/users/hieuta81pk-gmail.com/apps/wifih32/distribution_groups/user).
+* [Link down windows .exe GGdrive](https://drive.google.com/file/d/1AVadodXaPZ_2nUta0_qeHAMsgQyOTP8I/view?usp=sharing).
+* [Link down bản android](https://install.appcenter.ms/users/hieuta81pk-gmail.com/apps/wifih32/distribution_groups/user).
 
 Support: Windows, Android
 
