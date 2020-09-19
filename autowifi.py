@@ -1,6 +1,6 @@
 import platform
-import subprocess
 import time
+import socket
 from requests import Session
 from bs4 import BeautifulSoup as bs
 
@@ -19,16 +19,20 @@ banner = """\
 #############################################
 """
 
-def ping_check(host):
-  param = '-n' if platform.system().lower()=='windows' else '-c'
-  command = ['ping', param, '1', host]
-  return subprocess.Popen(command, stdout=subprocess.PIPE).communicate()==0
+def check_host(host, port):
+  s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  s.settimeout(5)
+  try:
+    s.connect((host, port))
+    return True
+  except socket.timeout:
+    return False
 
 def main():
   print(banner)
   # Check if user connect to wifi
   print("[!]Checking connection...")
-  while not ping_check(URL):
+  while not check_host("172.16.0.1", 8002):
     print("[!]Please connect to wifi DHCN!")
     input("Press any key to continue...\n")
 
