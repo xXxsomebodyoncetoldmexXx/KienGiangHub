@@ -23,6 +23,6 @@ Support: Windows, Android
   * Bypass Windows Defender
   * Tự động kết nối wifi DHCN
   * Hỗ trợ IOS
-  * Hỗ trợ Linux/MacOS
+  * ~~Hỗ trợ Linux/MacOS~~
   * Tạo GUI?
   * Chèn thêm malware???
