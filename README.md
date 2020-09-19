@@ -13,8 +13,14 @@ Hướng Dẫn sử dụng:
 3. Suy nghĩ lại về cuộc đời vì sao mình lại cần đọc cái hướng dẫn này.
 4. Wala, bạn đã kết nối tới wifi của DHCN.
 
+[Link down bản android](https://install.appcenter.ms/users/hieuta81pk-gmail.com/apps/wifih32/distribution_groups/user).
+
+Support: Windows, Android
 
 * Todos:
-  * Hỗ trợ cho DHCN 5Ghz (chưa test)
+  * ~~Hỗ trợ cho DHCN 5Ghz (chưa test)~~ Đã test và chạy
+  * Tự động kết nối wifi DHCN
+  * Hỗ trợ IOS
+  * Hỗ trợ Linux/MacOS
   * Tạo GUI?
   * Chèn thêm malware???
