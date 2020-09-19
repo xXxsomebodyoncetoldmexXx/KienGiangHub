@@ -63,7 +63,7 @@ def main():
     except Exception as e:
       flg = True
       print("main_loop error:", e)
-      input("Press anykey to continue...")
+      time.sleep(1)
   input("Press anykey to continue...")
 
 if __name__ == '__main__':
