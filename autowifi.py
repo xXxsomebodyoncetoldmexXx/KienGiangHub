@@ -60,9 +60,10 @@ def main():
     except KeyboardInterrupt:
       print("[!]Stop the script!")
       break
-    except e:
-      print(e)
-      break
+    except Exception as e:
+      flg = True
+      print("main_loop error:", e)
+      input("Press anykey to continue...")
   input("Press anykey to continue...")
 
 if __name__ == '__main__':
