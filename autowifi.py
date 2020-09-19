@@ -25,7 +25,11 @@ def check_host(host, port):
   try:
     s.connect((host, port))
     return True
-  except socket.timeout:
+  except (socket.timeout, OSError):
+    return False
+  except Exception as e:
+    print("check_host error:", str(e))
+    input()
     return False
 
 def main():
