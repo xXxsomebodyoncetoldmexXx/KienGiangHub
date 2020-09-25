@@ -20,7 +20,7 @@ Support: Windows, Android
 
 * Todos:
   * ~~Hỗ trợ cho DHCN 5Ghz (chưa test)~~ Đã test và chạy
-  * Bypass Windows Defender
+  * ~~Bypass Windows Defender~~
   * Tự động kết nối wifi DHCN
   * Hỗ trợ IOS
   * ~~Hỗ trợ Linux/MacOS~~
