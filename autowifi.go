@@ -16,7 +16,8 @@ func main() {
 		"auth_pass": {"dhcn"},
 		"accept":    {"Đăng nhập"},
 	}
-	URL := "http://172.16.0.1:8002/index.php?zone=iuh"
+	URL := "https://pfsense.iuh.edu.vn:8003/index.php?zone=iuh"
+	URL2:= "http://172.16.0.1:8002/index.php?zone=iuh"
 	isSend := false
 	sleepTime := flag.Int("sleep", 5, "Time to sleep between call")
 	flag.Parse()
@@ -28,10 +29,23 @@ func main() {
 			isSend = true
 			continue
 		}
+		resp2,err := http.PostForm(URL2, formData)
+		if err != nil {
+			log.Fatalln(err)
+			isSend = true
+			continue
+		}
 
 		defer resp.Body.Close()
+		defer resp2.Body.Close()
 
 		body, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
+			log.Fatalln(err)
+			isSend = false
+			continue
+		}
+		body2, err := ioutil.ReadAll(resp2.Body)
 		if err != nil {
 			log.Fatalln(err)
 			isSend = false
@@ -40,6 +54,7 @@ func main() {
 		if !isSend {
 			// log.Println("[+]You are connected!")
 			log.Println("[!]Response: " + string(body))
+			log.Println("[!]Response: " + string(body2))
 			isSend = true
 		}
 		time.Sleep(time.Duration(*sleepTime) * time.Second)
